@@ -5,7 +5,6 @@ custom:
   env: ${file(${self:custom.relativePathToCommon}/env.yml)}
   prefixes: ${file(${self:custom.relativePathToCommon}/prefixes.yml)}
 
-
 provider:
   name: aws
   runtime: python3.7
@@ -14,12 +13,12 @@ provider:
   environment: ${self:custom.env}
   # region: ${opt:region, us-east-1}
 
-
 package:
   individually: true
   exclude:
     - .git/**
-
+  include:
+    - modules/*
 
 functions:
   hello:
@@ -72,10 +71,6 @@ functions:
 #      - cognitoUserPool:
 #          pool: MyUserPool
 #          trigger: PreSignUp
-
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
 
 # you can add CloudFormation resource templates here
 #resources:
