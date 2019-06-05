@@ -1,6 +1,5 @@
 import json
-from flask import Flask
-from flask import jsonify
+from flask import Flask, jsonify
 
 # Import your lambda function handlers here
 from functions.hello import handler as hello
