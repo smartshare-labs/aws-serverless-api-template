@@ -23,7 +23,7 @@ Note: A good rule of thumb when developing is to keep core application logic out
 
 ### Using the local flask server
 
-We assume you already have docker installed.
+We assume you already have docker installed. From the `./local_server` folder, run `docker-compose up --build`. For each lambda handler that you want to expose in the local flask app, add a route in `./local_server/app.py` that forwards the appropriate event/context to your function. 
 
 ---
 
