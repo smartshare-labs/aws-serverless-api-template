@@ -4,7 +4,7 @@ import os
 
 def hello(event, context):
     body = {
-        "message": "Hello world",
+        "message": "Hello lambda",
         "input": event,
         "secret":  os.getenv('SOME_VAR', 'nada')
     }

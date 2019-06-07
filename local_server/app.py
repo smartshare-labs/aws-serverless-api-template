@@ -4,11 +4,15 @@ from flask import Flask, jsonify
 # Import your lambda function handlers here
 from functions.hello import handler as hello
 
+# You can import reusable code from the modules directory
+# from modules.example import *
+
 app = Flask(__name__)
 
 
 @app.route('/')
 def _hello():
+
     test_event = {
     }
 
